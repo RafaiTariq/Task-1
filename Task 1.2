@@ -1,0 +1,19 @@
+Module Module1
+
+    Sub Main()
+        Dim Name As String
+        Dim MemberID As String
+        FileOpen(1, "C:\members\task1.txt", OpenMode.Input)
+        While Not EOF(1)
+            Input(1, Name)
+            Console.WriteLine(Name)
+            Input(1, MemberID)
+            Console.WriteLine(MemberID)
+        End While
+
+
+        FileClose(1)
+        Console.ReadKey()
+    End Sub
+
+End Module
