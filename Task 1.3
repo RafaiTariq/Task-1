@@ -1,0 +1,27 @@
+Sub Main()
+        Dim Name As String
+        Dim MemberID As String
+        Dim Search As String
+        Dim IsFound As Boolean = False
+        FileOpen(1, "C:\members\task1.txt", OpenMode.Input)
+        Console.WriteLine("Please Enter The Name You Wish To Search For: ")
+        Search = Console.ReadLine()
+
+        While Not EOF(1)
+            Input(1, Name)
+            Input(1, MemberID)
+            If Search = Name Then
+                Console.WriteLine("MemberID: " & MemberID)
+                IsFound = True
+            End If
+
+
+        End While
+        If IsFound = False Then
+            Console.WriteLine("Record Not Found")
+        End If
+
+
+        FileClose(1)
+        Console.ReadKey()
+    End Sub
