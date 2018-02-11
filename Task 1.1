@@ -1,0 +1,23 @@
+Module Module1
+
+    Sub Main()
+        Dim Name As String = ""
+        Dim MemberID As String = ""
+        Dim MoreRecords As Boolean = True
+        FileOpen(1, "C:\members\task1.txt", OpenMode.Output)
+        While MoreRecords = True
+            Console.WriteLine("Please Enter Your Name ")
+            Name = Console.ReadLine
+            Console.WriteLine("Please Enter Your Member ID Number ")
+            MemberID = Console.ReadLine
+            WriteLine(1, Name)
+            WriteLine(1, MemberID)
+            Console.WriteLine("Any More Records?")
+            Console.WriteLine("Please Write True Or False...")
+            MoreRecords = Console.ReadLine
+        End While
+
+        FileClose(1)
+    End Sub
+
+End Module
